@@ -1,9 +1,10 @@
 import "./Article.css";
 
-const Article = () => {
+const Article = (props) => {
   return (
     <div className="article-card">
-      <p>Article</p>
+      <img className="article-img" src={props.img} alt="Article shot" />
+      <h2>{props.title}</h2>
     </div>
   );
 };
