@@ -6,7 +6,6 @@ import getArticles from "../../apiCalls";
 
 function App() {
   const [articles, setArticles] = useState([]);
-  console.log(articles);
 
   useEffect(() => {
     getArticles().then((data) => setArticles(data.articles));

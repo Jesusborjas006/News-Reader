@@ -1,3 +1,5 @@
 .article-container {
-  border: 2px solid #000;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 5vh auto 0;
 }
