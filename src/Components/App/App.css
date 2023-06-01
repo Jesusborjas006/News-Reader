@@ -9,3 +9,8 @@ h2 {
 a {
   text-decoration: none;
 }
+
+.red {
+  color: rgb(225, 30, 30);
+  font-weight: bold;
+}
