@@ -31,3 +31,17 @@
   margin-bottom: 3vh;
   font-size: 20px;
 }
+
+/* Media Queries */
+/* Mobile */
+@media only screen and (max-width: 750px) {
+  .details-container {
+    width: 90%;
+    margin: 5vh auto;
+  }
+
+  .detail-title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+}
