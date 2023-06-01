@@ -1,0 +1,33 @@
+.details-container {
+  width: 65%;
+  margin: 5vh auto;
+}
+
+.detail-title {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.detail-img {
+  width: 100%;
+  margin: 14px 0;
+}
+
+.source-container {
+  margin-bottom: 1rem;
+}
+
+.description-container {
+  line-height: 1.4;
+}
+
+.content {
+  margin: 14px 0;
+}
+
+.back-btn {
+  color: #000;
+  display: inline-block;
+  margin-bottom: 3vh;
+  font-size: 20px;
+}

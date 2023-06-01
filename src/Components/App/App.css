@@ -1,0 +1,16 @@
+h2 {
+  color: #000;
+}
+
+.logo {
+  color: #f1f1f1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.red {
+  color: rgb(225, 30, 30);
+  font-weight: bold;
+}
