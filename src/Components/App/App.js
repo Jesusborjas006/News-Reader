@@ -4,18 +4,24 @@ import Navbar from "../Navbar/Navbar";
 import "./App.css";
 import getArticles from "../../apiCalls";
 import { Route, Switch } from "react-router-dom";
+import ArticleDetails from "../ArticleDetails/ArticleDetails";
 
 function App() {
   const [articles, setArticles] = useState([]);
-  const [articleClicked, setArticleClicked] = useState(0);
-  console.log(articleClicked);
+  const [articleNum, setArticleNum] = useState(0);
+  const [specificArticle, setSpecificArticle] = useState({});
 
   useEffect(() => {
     getArticles().then((data) => setArticles(data.articles));
   }, []);
 
-  const getSpecificArticle = (articleNum) => {
-    setArticleClicked(articleNum);
+  const getSpecificArticle = (articleNumber) => {
+    setArticleNum(articleNumber);
+    console.log(articleNum);
+    const articleDetails = articles.find(
+      (article, index) => index === articleNum
+    );
+    setSpecificArticle(articleDetails);
   };
 
   return (
@@ -29,7 +35,7 @@ function App() {
           />
         </Route>
         <Route path="/articleDetails/:id">
-          <p>Details {articleClicked}</p>
+          <ArticleDetails specificArticle={specificArticle}/>
         </Route>
       </Switch>
     </main>
