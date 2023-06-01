@@ -10,6 +10,7 @@ const ArticleContainer = (props) => {
       published={article.publishedAt}
       id={index}
       key={index}
+      getSpecificArticle={props.getSpecificArticle}
     />
   ));
   return <div className="article-container">{articleCards}</div>;
