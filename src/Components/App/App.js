@@ -10,6 +10,7 @@ function App() {
   const [articles, setArticles] = useState([]);
   const [articleNum, setArticleNum] = useState(null);
   const [query, setQuery] = useState("");
+  const [formDisplayed, setFormDisplayed] = useState(true)
 
   const filteredArticles = articles.filter((article) => {
     return article.title.toLowerCase().includes(query.toLowerCase());
@@ -23,18 +24,23 @@ function App() {
     setArticleNum(articleNumber);
   };
 
+  const toggleForm = () => {
+    setFormDisplayed(!formDisplayed)
+  }
+
   return (
     <main className="main-app">
-      <Navbar query={query} setQuery={setQuery} />
+      <Navbar query={query} setQuery={setQuery} formDisplayed={formDisplayed} toggleForm={toggleForm}/>
       <Switch>
         <Route path="/" exact>
           <ArticleContainer
             articles={filteredArticles}
             getSpecificArticle={getSpecificArticle}
+            toggleForm={toggleForm}
           />
         </Route>
         <Route path="/articleDetails/:id">
-          <ArticleDetails articles={filteredArticles} articleNum={articleNum} />
+          <ArticleDetails articles={filteredArticles} articleNum={articleNum} toggleForm={toggleForm}/>
         </Route>
       </Switch>
     </main>

@@ -9,7 +9,7 @@ const ArticleDetails = (props) => {
 
   return (
     <div className="details-container">
-      <Link className="back-btn" to="/">
+      <Link className="back-btn" to="/" onClick={() => props.toggleForm()}>
         ⬅ Go Back
       </Link>
       <div className="text-container">

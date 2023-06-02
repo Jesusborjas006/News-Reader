@@ -10,13 +10,21 @@ const Article = (props) => {
           className="article-img"
           src={!props.img ? notFound : props.img}
           alt="Article shot"
-          onClick={() => props.getSpecificArticle(props.id)}
+          onClick={() => {
+            props.getSpecificArticle(props.id);
+            props.toggleForm();
+          }}
         />
       </Link>
-      <p className="published">{props.published.split("").slice(0, 10).join("")}</p>
+      <p className="published">
+        {props.published.split("").slice(0, 10).join("")}
+      </p>
       <Link to={`/articleDetails/${props.id}`}>
         <h2
-          onClick={() => props.getSpecificArticle(props.id)}
+          onClick={() => {
+            props.getSpecificArticle(props.id);
+            props.toggleForm();
+          }}
           className="title"
         >
           {props.title}
