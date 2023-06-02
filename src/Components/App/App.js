@@ -10,8 +10,6 @@ function App() {
   const [articles, setArticles] = useState([]);
   const [articleNum, setArticleNum] = useState(null);
   const [query, setQuery] = useState("");
-  console.log("3", articles[1]);
-  console.log(articles[6]);
 
   const filteredArticles = articles.filter((article) => {
     return article.title.toLowerCase().includes(query.toLowerCase());

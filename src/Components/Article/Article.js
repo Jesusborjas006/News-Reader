@@ -3,7 +3,6 @@ import "./Article.css";
 import notFound from "../../images/image-not-found-scaled.png";
 
 const Article = (props) => {
-  console.log(props.published.split("").slice(0, 10).join(""))
   return (
     <div className="article-card">
       <Link to={`/articleDetails/${props.id}`}>
