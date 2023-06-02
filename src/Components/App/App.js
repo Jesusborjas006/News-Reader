@@ -10,7 +10,6 @@ function App() {
   const [articles, setArticles] = useState([]);
   const [articleNum, setArticleNum] = useState(null);
   const [query, setQuery] = useState("");
-  
 
   const filteredArticles = articles.filter((article) => {
     return article.title.toLowerCase().includes(query.toLowerCase());
@@ -26,7 +25,7 @@ function App() {
 
   return (
     <main className="main-app">
-      <Navbar query={query} setQuery={setQuery}/>
+      <Navbar query={query} setQuery={setQuery} />
       <Switch>
         <Route path="/" exact>
           <ArticleContainer
