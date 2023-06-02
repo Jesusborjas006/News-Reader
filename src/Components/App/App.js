@@ -9,6 +9,11 @@ import ArticleDetails from "../ArticleDetails/ArticleDetails";
 function App() {
   const [articles, setArticles] = useState([]);
   const [articleNum, setArticleNum] = useState(null);
+  const [query, setQuery] = useState("");
+
+  const filteredArticles = articles.filter((article) => {
+    return article.title.toLowerCase().includes(query.toLowerCase());
+  });
 
   useEffect(() => {
     getArticles().then((data) => setArticles(data.articles));
@@ -21,15 +26,24 @@ function App() {
   return (
     <main className="main-app">
       <Navbar />
+      <form>
+        <input
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          type="text"
+          placeholder="Search for article..."
+        />
+      </form>
+
       <Switch>
         <Route path="/" exact>
           <ArticleContainer
-            articles={articles}
+            articles={filteredArticles}
             getSpecificArticle={getSpecificArticle}
           />
         </Route>
         <Route path="/articleDetails/:id">
-          <ArticleDetails articles={articles} articleNum={articleNum}/>
+          <ArticleDetails articles={filteredArticles} articleNum={articleNum} />
         </Route>
       </Switch>
     </main>
