@@ -11,6 +11,7 @@ const ArticleContainer = (props) => {
       id={index}
       key={index}
       getSpecificArticle={props.getSpecificArticle}
+      toggleForm={props.toggleForm}
     />
   ));
   return <div className="article-container">{articleCards}</div>;
