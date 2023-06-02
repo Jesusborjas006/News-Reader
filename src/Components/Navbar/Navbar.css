@@ -1,14 +1,14 @@
 .nav {
   background: #131313;
   color: #f1f1f1;
-  padding: 20px 3.5vw;
+  padding: 24px 3.5vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .search {
-  padding: 8px;
+  padding: 10px;
   border: none;
   width: 25vw;
   border-radius: 5px;
