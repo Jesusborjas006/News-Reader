@@ -1,6 +1,6 @@
 const getArticles = () => {
   return fetch(
-    `https://newsapi.org/v2/everything?q=keyword&apiKey=${process.env.REACT_APP_API_KEY}`
+    `https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_API_KEY}`
   ).then((response) => response.json());
 };
 

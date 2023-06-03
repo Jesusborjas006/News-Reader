@@ -3,6 +3,17 @@ import "./Article.css";
 import notFound from "../../images/image-not-found-scaled.png";
 
 const Article = (props) => {
+  const date = new Date(props.published);
+  let day = props.published.split("").slice(8, 10).join("");
+  const year = props.published.split("").slice(0, 4).join("");
+  const month = date.toLocaleString("en-US", {
+    month: "long",
+  });
+
+  if (day.split("")[0] === "0") {
+    day = day.split("")[1];
+  }
+
   return (
     <div className="article-card">
       <Link to={`/articleDetails/${props.id}`}>
@@ -16,9 +27,7 @@ const Article = (props) => {
           }}
         />
       </Link>
-      <p className="published">
-        {props.published.split("").slice(0, 10).join("")}
-      </p>
+      <p className="published">{`${month} ${day}, ${year}`}</p>
       <Link to={`/articleDetails/${props.id}`}>
         <h2
           onClick={() => {
