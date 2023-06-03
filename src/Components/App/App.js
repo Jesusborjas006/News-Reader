@@ -11,14 +11,16 @@ function App() {
   const [articles, setArticles] = useState([]);
   const [articleNum, setArticleNum] = useState(null);
   const [query, setQuery] = useState("");
-  const [formDisplayed, setFormDisplayed] = useState(true)
+  const [formDisplayed, setFormDisplayed] = useState(true);
 
   const filteredArticles = articles.filter((article) => {
     return article.title.toLowerCase().includes(query.toLowerCase());
   });
 
   useEffect(() => {
-    getArticles().then((data) => setArticles(data.articles));
+    getArticles().then((data) => {
+      setArticles(data.articles);
+    });
   }, []);
 
   const getSpecificArticle = (articleNumber) => {
@@ -26,15 +28,24 @@ function App() {
   };
 
   const toggleForm = () => {
-    setFormDisplayed(!formDisplayed)
-  }
+    setFormDisplayed(!formDisplayed);
+  };
 
   return (
     <main className="main-app">
-      <Navbar query={query} setQuery={setQuery} formDisplayed={formDisplayed} toggleForm={toggleForm}/>
+      <Navbar
+        query={query}
+        setQuery={setQuery}
+        formDisplayed={formDisplayed}
+        toggleForm={toggleForm}
+      />
       <Switch>
         <Route path="/" exact>
-          <FeaturedContainer articles={filteredArticles}/>
+          <FeaturedContainer
+            articles={articles}
+            getSpecificArticle={getSpecificArticle}
+            toggleForm={toggleForm}
+          />
           <ArticleContainer
             articles={filteredArticles}
             getSpecificArticle={getSpecificArticle}
@@ -42,7 +53,11 @@ function App() {
           />
         </Route>
         <Route path="/articleDetails/:id">
-          <ArticleDetails articles={filteredArticles} articleNum={articleNum} toggleForm={toggleForm}/>
+          <ArticleDetails
+            articles={filteredArticles}
+            articleNum={articleNum}
+            toggleForm={toggleForm}
+          />
         </Route>
       </Switch>
     </main>
