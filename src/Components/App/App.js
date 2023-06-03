@@ -5,6 +5,7 @@ import "./App.css";
 import getArticles from "../../apiCalls";
 import { Route, Switch } from "react-router-dom";
 import ArticleDetails from "../ArticleDetails/ArticleDetails";
+import FeaturedContainer from "../FeaturedContainer/FeaturedContainer";
 
 function App() {
   const [articles, setArticles] = useState([]);
@@ -33,6 +34,7 @@ function App() {
       <Navbar query={query} setQuery={setQuery} formDisplayed={formDisplayed} toggleForm={toggleForm}/>
       <Switch>
         <Route path="/" exact>
+          <FeaturedContainer articles={filteredArticles}/>
           <ArticleContainer
             articles={filteredArticles}
             getSpecificArticle={getSpecificArticle}
