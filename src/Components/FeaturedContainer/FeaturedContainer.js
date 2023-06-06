@@ -1,5 +1,6 @@
 import FeaturedArticle from "./FeaturedArticle";
 import "./FeaturedContainer.css";
+import SideArticle from "./SideArticle";
 
 const FeaturedContainer = (props) => {
   const featuredCard = props.articles.map((article, index) => (
@@ -19,11 +20,23 @@ const FeaturedContainer = (props) => {
     return article.props.id === props.featuredNum;
   });
 
+  const sideArticles = props.articles.map((article, index) => (
+    <SideArticle
+      img={article.urlToImage}
+      title={article.title}
+      publishedAt={article.publishedAt}
+      id={index}
+      key={index}
+      getSpecificArticle={props.getSpecificArticle}
+      toggleForm={props.toggleForm}
+    />
+  ));
+
   return (
     <div className="featured-container">
       {final}
       <div className="random-articles-container">
-        <h3>Random Article</h3>
+        {sideArticles.splice(5, 3)}
       </div>
     </div>
   );

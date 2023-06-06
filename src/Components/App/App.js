@@ -13,7 +13,6 @@ function App() {
   const [query, setQuery] = useState("");
   const [formDisplayed, setFormDisplayed] = useState(true);
   const [featuredNum, setFeaturedNum] = useState(0);
-  console.log(featuredNum);
 
   const filteredArticles = articles.filter((article) => {
     return article.title.toLowerCase().includes(query.toLowerCase());
@@ -22,7 +21,7 @@ function App() {
   useEffect(() => {
     getArticles().then((data) => {
       setArticles(data.articles);
-      setFeaturedNum(Math.floor(Math.random() * 20) + 1);
+      setFeaturedNum(Math.floor(Math.random() * 20));
     });
   }, []);
 

@@ -1,12 +1,10 @@
 .featured-container {
-  /* border: 1px solid red; */
   display: flex;
   width: 93%;
   margin: 5vh auto 0;
 }
 
 .featured-card {
-  /* border: 2px solid purple; */
   width: 55%;
   position: relative;
   cursor: pointer;
@@ -15,12 +13,13 @@
 .featured-img {
   width: 100%;
   border-radius: 10px;
+  height: 440px;
+  max-height: 440px;
 }
 
 .featured-heading {
   position: absolute;
   top: 0;
-  /* background-color: red; */
   color: white;
   border-radius: 10px 0 0 0;
   padding: 10px 16px;
@@ -47,7 +46,33 @@
 }
 
 .random-articles-container {
-  /* border: 1px solid blue; */
   width: 45%;
-  padding: 20px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.side-article {
+  display: flex;
+  cursor: pointer;
+  min-height: 140px;
+  max-height: 140px;
+}
+
+.side-article-img {
+  width: 40%;
+  border-radius: 10px;
+}
+
+.side-article-text {
+  padding: 10px;
+}
+
+.side-article-title {
+  margin: 10px 0 0;
+}
+
+a {
+  color: #000;
 }
