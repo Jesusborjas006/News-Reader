@@ -2,8 +2,6 @@ import FeaturedArticle from "./FeaturedArticle";
 import "./FeaturedContainer.css";
 
 const FeaturedContainer = (props) => {
-  const randomNumber = Math.floor(Math.random() * 20) + 1;
-
   const featuredCard = props.articles.map((article, index) => (
     <FeaturedArticle
       img={article.urlToImage}
@@ -18,7 +16,7 @@ const FeaturedContainer = (props) => {
   ));
 
   const final = featuredCard.find((article) => {
-    return article.props.id === randomNumber;
+    return article.props.id === props.featuredNum;
   });
 
   return (
