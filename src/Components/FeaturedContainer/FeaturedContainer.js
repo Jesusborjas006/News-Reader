@@ -33,12 +33,18 @@ const FeaturedContainer = (props) => {
   ));
 
   return (
-    <div className="featured-container">
-      {final}
-      <div className="random-articles-container">
-        {sideArticles.splice(5, 3)}
-      </div>
-    </div>
+    <>
+      {!props.query ? (
+        <div className="featured-container">
+          {final}
+          <div className="random-articles-container">
+            {sideArticles.splice(5, 3)}
+          </div>
+        </div>
+      ) : (
+        <></>
+      )}
+    </>
   );
 };
 

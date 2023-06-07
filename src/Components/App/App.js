@@ -48,6 +48,7 @@ function App() {
             getSpecificArticle={getSpecificArticle}
             toggleForm={toggleForm}
             featuredNum={featuredNum}
+            query={query}
           />
           <ArticleContainer
             articles={filteredArticles}
