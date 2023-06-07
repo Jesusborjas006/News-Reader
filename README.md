@@ -1,7 +1,7 @@
 # News Reader
 
 ## Abstract:
-This application displays multiple articles coming from the News API. The user can click on an article to see more details by navigating the user to a new page using Router. This application will include a search feature in the the near future and this application is responsive across multiple devices.
+This application displays multiple articles coming from the News API. The user can click on an article to see more details by navigating the user to a new page using Router. This application includes a search feature and is responsive across all devices.
 
 ## Contributors:
 - Jesus Borjas [LinkedIn](https://www.linkedin.com/in/jesus-borjas-6589b920a/), [Github](https://github.com/jesusborjas006)
@@ -17,8 +17,8 @@ This application displays multiple articles coming from the News API. The user c
 1. Copy and paste the generated `localServer` address that your terminal provides into your browser address bar.
 
 ## Preview of App:
-<img width="1508" alt="Screenshot 2023-06-01 at 3 47 36 PM" src="https://github.com/Jesusborjas006/News-Reader/assets/111095858/75f73bfa-2abf-4f32-8a7c-654bc6c18843">
-<img width="1508" alt="Screenshot 2023-06-01 at 3 49 16 PM" src="https://github.com/Jesusborjas006/News-Reader/assets/111095858/3f87a952-dfc7-41fc-b5f3-603aed8dcff5">
+<img width="1208" alt="Screenshot 2023-06-07 at 3 33 00 PM" src="https://github.com/Jesusborjas006/News-Reader/assets/111095858/97e77e26-2f1a-4bd4-8fa5-b74038a3ac84">
+<img width="1208" alt="Screenshot 2023-06-07 at 3 33 33 PM" src="https://github.com/Jesusborjas006/News-Reader/assets/111095858/450e5972-144b-4b10-9c7c-96f0c690c1b6">
 
 ## Technologies Used: 
   - React 
@@ -27,6 +27,5 @@ This application displays multiple articles coming from the News API. The user c
   - Lighthouse
 
 ## Future Feature Ideas:
-  - Adding a feature article
-  - Have a sidebar displaying weekly articles
   - Add a feaute to save article to read later
+
