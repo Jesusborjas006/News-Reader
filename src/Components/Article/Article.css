@@ -24,6 +24,7 @@
   max-height: 240px;
   margin-bottom: 10px;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .published {

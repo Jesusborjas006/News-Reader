@@ -7,13 +7,24 @@ const ArticleDetails = (props) => {
     return index === props.articleNum;
   });
 
+  const date = new Date(articleDisplayed.publishedAt);
+  let day = articleDisplayed.publishedAt.split("").slice(8, 10).join("");
+  const year = articleDisplayed.publishedAt.split("").slice(0, 4).join("");
+  const month = date.toLocaleString("en-US", {
+    month: "long",
+  });
+
+  if (day.split("")[0] === "0") {
+    day = day.split("")[1];
+  }
+
   return (
     <div className="details-container">
       <Link className="back-btn" to="/" onClick={() => props.toggleForm()}>
         ⬅ Go Back
       </Link>
       <div className="text-container">
-        <p>{articleDisplayed.publishedAt.split("").slice(0, 10).join("")}</p>
+        <p>{`${month} ${day}, ${year}`}</p>
         <h3 className="detail-title">{articleDisplayed.title}</h3>
       </div>
       <img
