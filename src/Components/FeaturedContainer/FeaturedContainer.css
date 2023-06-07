@@ -76,3 +76,48 @@
 a {
   color: #000;
 }
+
+/* Media Queries */
+/* Mobile */
+@media only screen and (max-width: 800px) {
+  .featured-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .featured-card {
+    width: 100%;
+  }
+
+  .featured-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .featured-heading {
+    font-size: 18px;
+  }
+
+  .random-articles-container {
+    width: 100%;
+    padding: 0;
+    margin: 20px 0 0;
+  }
+
+  .side-article {
+    display: flex;
+    cursor: pointer;
+    min-height: 140px;
+    max-height: 140px;
+    margin: 14px 0;
+  }
+
+  .featured-text {
+    width: 100%;
+  }
+
+  .featured-text p {
+    width: 100%;
+    font-size: 15px;
+  }
+}
