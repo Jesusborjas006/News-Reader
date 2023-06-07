@@ -6,6 +6,7 @@ import getArticles from "../../apiCalls";
 import { Route, Switch } from "react-router-dom";
 import ArticleDetails from "../ArticleDetails/ArticleDetails";
 import FeaturedContainer from "../FeaturedContainer/FeaturedContainer";
+import Footer from "../Footer/Footer";
 
 function App() {
   const [articles, setArticles] = useState([]);
@@ -64,6 +65,7 @@ function App() {
           />
         </Route>
       </Switch>
+      <Footer />
     </main>
   );
 }
