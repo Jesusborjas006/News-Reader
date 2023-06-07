@@ -17,6 +17,7 @@ This application displays multiple articles coming from the News API. The user c
 1. Copy and paste the generated `localServer` address that your terminal provides into your browser address bar.
 
 ## Preview of App:
+![](https://media.giphy.com/media/2py8ZW2sOyxwnvHMVw/giphy.gif)
 <img width="1208" alt="Screenshot 2023-06-07 at 3 33 00 PM" src="https://github.com/Jesusborjas006/News-Reader/assets/111095858/97e77e26-2f1a-4bd4-8fa5-b74038a3ac84">
 <img width="1208" alt="Screenshot 2023-06-07 at 3 33 33 PM" src="https://github.com/Jesusborjas006/News-Reader/assets/111095858/450e5972-144b-4b10-9c7c-96f0c690c1b6">
 
